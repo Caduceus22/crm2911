@@ -6,4 +6,4 @@ git add *
 git commit -m "$datatime_now"
 git branch -M main
 git remote add origin https://github.com/Caduceus22/crm2911.git
-git push -w origin main
+git push -u origin main
