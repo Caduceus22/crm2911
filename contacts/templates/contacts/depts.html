@@ -7,6 +7,8 @@
 <body>
 <h3>HTML шаблон страницы списка отделов</h3>
 
+{% if departures_list %}
+
 <table border="1">
     <tr>
         <th>ID</th>
@@ -33,6 +35,8 @@
 {% endfor %}
 </table>
 
-
+{% else %}
+Нет данных
+{% endif %}
 </body>
 </html>

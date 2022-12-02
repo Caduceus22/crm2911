@@ -1,8 +1,19 @@
 from django.db import models
 
 
+class Departures(models.Model):
+    dep_name = models.CharField(max_length=100, verbose_name='Название отдела')
+
+    def __str__(self):
+        return self.dep_name
+
+    class Meta:
+        verbose_name = 'Отдел'
+        verbose_name_plural = 'Отделы'
+
+
 class Contacts_all(models.Model):
-    department_cont = models.CharField(max_length=100, verbose_name='Отдел')
+    department_name = models.ForeignKey(Departures, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Название отдела')
     department_tel = models.CharField(max_length=3, verbose_name='Внутренний телефон')
     department_position = models.CharField(max_length=100, verbose_name='Должность')
     position_first_name = models.CharField(max_length=100, verbose_name='Имя')
@@ -17,4 +28,5 @@ class Contacts_all(models.Model):
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
+
 

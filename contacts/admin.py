@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Contacts_all
+from .models import *
 
 admin.site.register(Contacts_all)
+admin.site.register(Departures)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+{% block mainmenu %}
+<h3>Блок верхнего меню</h3>
+<ul>
+    {% for m in menu %}
+    <li>{{m}}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock mainmenu %}
+
+{% block content %}
+{% endblock %}
+
+<h2>Подвал</h2>
+
+</body>
+</html>
