@@ -4,4 +4,4 @@ from .models import *
 
 
 def contacts_page(request):
-    return render(request, 'contacts/contacts.html')
+    return HttpResponse("Контакты")
